@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+
+    <head>
+    
+        <title>Carte</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
+    </head>
+    
+    <body>
+        
+        
+        <div id="map"></div>
+        <div id="stationInfos">
+            <p id="nom_station"></p>
+            <p id="adresse_station"></p>
+            <p id="velo_disponible">Vélos disponibles: </p>
+            <p id="place_disponible">Nombre de stationnement disponible: </p>
+            <p id="status"></p>
+            
+            <form>
+                <input type="text" id="prenom" placeholder="Prénom" required/>
+                <input type="text" id="nom" placeholder="Nom" required/>
+                <input type="submit" value="Réserver" class="btn_canvas" id="reserver"/>
+            
+            </form>
+            
+            <div id="signature">
+                <canvas id="canvas"></canvas>
+                <p id="message"></p>
+                <div id="btn">
+                    <button id="confirmer" class="btn_canvas">Confirmer</button>
+                    <button id="annuler" class="btn_canvas">Effacer</button>   
+                </div>
+            </div>
+        </div>
+        
+        <div id="resume_confirmation">
+            <p>Vous avez réservé votre vélo à la station:<span id="station_reservee"></span></p>
+            <p>Temps restant avant annulation de la réservation: <span id="compteur"></span> </p>
+            <button id="annuler_reservation">Annuler la réservation</button>
+        
+        </div>
+    
+        <script src="script.js"></script>
+    </body>
+
+
+
+
+</html>
