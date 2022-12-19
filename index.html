@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+    
+        <title>Velo-City Lyon - Projet OpenClassroom</title>
+        <meta charset="utf-8"/>
+        <link rel="icon" type="image/png" href="images/logo.png" />
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <meta name="description" content="Bienvenue sur notre site de reservation de vélo en ligne! Réservez votre vélo à Lyon en ligne en un clic et roulez">
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary">
+        <meta property="og:title" content="Vélo-city Lyon - Projet OpenClassroom"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://reservation-velo.000webhostapp.com"/>
+        <meta property="og:image" content="https://reservation-velo.000webhostapp.com/images/logo.png"/>
+        <meta property="og:description" content="Bienvenue sur notre site de reservation de vélo en ligne! Réservez votre vélo à Lyon en ligne en un clic et roulez"/>
+        <meta property="og:title" content="Vélo-city Lyon - Projet OpenClassroom"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://reservation-velo.000webhostapp.com"/>
+        <meta property="og:image" content="https://reservation-velo.000webhostapp.com/images/logo.png"/>
+        <meta property="og:description" content="Bienvenue sur notre site de reservation de vélo en ligne! Réservez votre vélo à Lyon en ligne en un clic et roulez"/>
+        <link rel="stylesheet" href="style/style.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
+    </head>
+    
+    <body>
+
+        <header>
+            <nav>
+                <a href="#"><img id="logo" src="images/logo-ConvertImage.png" alt="logo velo-City"/></a>
+                <ul>
+                    <li><a href="#reserver_velo">Réservez un vélo</a></li>
+                    <li><a href="#">Mode d'emploi</a></li>
+    
+                </ul>
+            </nav>
+
+           
+        </header>
+
+    
+        <section>
+            <div id="slider">
+
+                <div class="slide">
+                    <img src="images/1.png" alt=""/>
+                    <p>1 - Choisissez et cliquez sur une station</p>
+                </div>
+
+                <div class="slide">
+                    <img src="images/2.png" alt=""/>
+                    <p>2 - Saisissez votre prénom et nom puis signez</p>
+                </div>
+
+                <div class="slide">
+                    <img src="images/3.png" alt=""/>
+                    <p>3 - Votre réservation est terminée, vous avez 20 minutes pour récupérer votre vélo</p>
+                </div>
+
+                <div id="controle">
+                    <a id="prev"><img src="images/previous.png" alt="précédent"/></a>
+                    <a id="play"><img src="images/pause.png" alt="pause"/></a>
+                    <a id="next"><img src="images/next.png" alt="suivant"/></a>
+                </div>    
+            </div>
+        </section>
+
+        <section id="reserver_velo">
+            <div id="map"></div>
+            <div id="station_infos">
+                <p id="nom_station"></p>
+                <p id="adresse_station"></p>
+                <p id="velo_disponible">Vélos disponibles: </p>
+                <p id="place_disponible">Nombre de stationnement disponible: </p>
+                <p id="status"></p>
+                
+                <form>
+                    <input type="text" id="prenom" placeholder="Prénom" required/>
+                    <input type="text" id="nom" placeholder="Nom" required/>
+                    <input type="submit" value="Réserver" class="btn_style" id="reserver"/>
+                
+                </form>
+                
+                <div id="signature">
+                    <canvas id="canvas"></canvas>
+                    <p id="message"></p>
+                    <div id="btn">
+                        <button id="confirmer" class="btn_style">Confirmer</button>
+                        <button id="annuler" class="btn_style">Effacer</button>   
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div id="resume_confirmation">
+            <p id="station_reservee"></p>
+            <p id="nom_client"></p>
+            <p id="compteur"></p>
+            <button id="annuler_reservation" class="btn_style">Annuler la réservation</button>
+        </div>
+
+        <script src="scripts/carousel.js"></script>
+        <script src="scripts/map.js"></script>
+        <script src="scripts/station.js"></script>
+        <script src="scripts/canvas.js"></script>
+        <script src="scripts/reservation.js"></script>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>

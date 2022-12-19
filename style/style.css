@@ -1,0 +1,274 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #dddde8;
+    font-family: "Gill Sans", sans-serif;
+}
+
+header{
+    background-color: #f0f8ff;
+    width: 100%;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+}
+
+
+nav{
+    width:80%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    width:45%;
+}
+
+ul li{
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+ul li:hover{
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width:790px){
+
+    nav ul{
+        
+        width:50%;
+    }
+
+
+} 
+
+@media screen and (max-width:550px){
+
+    nav ul{
+        
+        flex-direction: column;
+    }
+
+
+} 
+
+/*slider*/
+
+
+#slider{
+    box-shadow: 15px 15px 15px black;;
+    margin: auto;
+    position: relative;
+    max-width: 1200px;
+    
+    
+}
+.slide img{
+    width:100%;
+    min-height: 200px;;
+}
+
+
+#slider p{
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    color:white;
+    font-size: 3em;
+    background-color:rgba(0, 0, 0, 0.7);
+    padding: 3px;
+}
+
+@media only screen and (max-width: 835px){
+    #slider p{
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 700px){
+    #slider p{
+        font-size: 1.6em;
+        top:20px;
+        left:15px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    #slider p{
+        font-size: 1.3em;
+    }
+
+    #controle img{
+        width:15px !important;
+      
+    }
+}
+
+
+#prev,#next,#play{
+    cursor: pointer;
+   
+}
+
+#controle{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    text-align: left;
+}
+
+#controle img{
+    width:24px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color:rgba(0,0,0, 0.7);
+}
+
+
+
+
+/*fin slider*/
+
+
+/*map*/
+
+
+section{
+    display: flex;
+    flex-direction: row;
+    max-width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+#map{
+    height: 509px;
+    position: relative;
+    z-index: 1;
+    width:100%;
+    margin: auto;
+}
+
+#station_infos{
+    height: min-content;
+    min-width: 30%;
+    padding: 10px;
+    box-shadow: 3px 3px 3px black; 
+    z-index: 2;
+    background-color: aliceblue;
+    display: none;
+    
+}
+
+form{
+    
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    height: auto;
+}
+
+form input{
+    margin-bottom: 10px;
+
+}
+
+#submit{
+    background-color: green;
+    
+}
+
+#btn{
+    text-align: center;
+}
+
+.btn_style{
+    
+    color:white;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.btn_style:hover{
+    box-shadow: 4px 4px 4px black;
+}
+
+#reserver{
+    background-color: lawngreen;
+}
+
+#annuler,#annuler_reservation{
+    background-color: red;
+}
+        
+#confirmer{
+    background-color: lawngreen;
+}
+canvas{
+    border: 2px black solid;
+}
+
+canvas:hover{
+    cursor:crosshair;
+}
+
+#signature{
+    display: none;
+    text-align: center;
+}
+
+@media screen and (max-width:1120px){
+    section{
+        flex-direction: column;
+
+    }
+
+    #map{
+        height: 50vh;
+    }
+
+    #station_infos{
+        height: min-content;
+        min-width: 30%;
+        padding: 1%;
+        border-radius: 0%;
+        box-shadow: 3px 3px 3px black; 
+        z-index: 2;
+        background-color: aliceblue;
+        display: none;
+        
+    }
+
+    #station_infos p{
+        text-align: center;
+    }
+
+    form{
+        width:55%;
+        margin: auto;
+    }
+}
+
+#resume_confirmation{
+    display: none;
+    position: sticky;
+    bottom:0;
+    background-color:rgb(0,0,0,0.75);
+    z-index: 100;
+    text-align: center;
+    padding:15px;
+}
+
+#resume_confirmation p{
+    color:white;
+}
